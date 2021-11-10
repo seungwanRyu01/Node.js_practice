@@ -1,0 +1,608 @@
+/*
+Template Name: Karobar
+Version: 1.0.0
+Theme URL: https://angrystudio.com/themes/karobar-free-bootstrap-4-template-for-startups
+Author: AngryStudio
+License: AngryStudio License 
+License URI: https://angrystudio.com/license/
+*/
+
+
+/*-- General Styles --*/
+
+body {
+	color: #4e4e4e;
+	font-size: 1.125rem;
+	font-family: 'Nunito', sans-serif;
+	line-height: 1.7rem;
+	overflow-x:hidden;
+}
+
+a {
+	color: #161616;
+	text-decoration: none;
+}
+
+.text-dark {
+	color: #161616!important;
+}
+
+.btn-dark {
+	background: linear-gradient(to right, #3d3d3d 50%, #161616 50%) repeat scroll right bottom/200% 100% transparent;
+	transition: background 350ms ease-in-out
+}
+
+.btn-dark:hover {
+	background-position: left bottom;
+}
+
+.section-head {
+	max-width: 800px;
+}
+
+.section-title {
+	font-size: 2.3rem;
+	letter-spacing: -1px;
+}
+
+.section-subtitle {
+	font-size: 1.125rem;
+}
+
+
+/*-- Navigation Menu --*/
+
+.nav-shadow {
+	box-shadow: 0 0 2px 0px rgba(0, 0, 0, .1)
+}
+
+.primary-menu {
+	background: #fff
+}
+
+.primary-menu .navbar-brand img {
+	max-width: 130px;
+}
+
+.primary-menu .navbar-nav .nav-link {
+	color: #161616;
+	font-weight: 700;
+	margin: 0 10px;
+	transition: all .3s ease-in-out;
+}
+
+.primary-menu .dropdown-menu {
+	border-color: rgba(0, 0, 0, .05);
+}
+
+.primary-menu .dropdown-item:focus,
+.primary-menu .dropdown-item:hover {
+	color: #fff;
+	background-color: #161616;
+}
+
+.primary-menu .navbar-toggler {
+	border: none
+}
+
+.primary-menu .navbar-toggler:focus {
+	box-shadow: none
+}
+
+.primary-menu .navbar-toggler-icon {
+	outline: none;
+}
+
+.primary-menu .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/*-- Hero Section --*/
+
+.hero {
+	padding: 100px 0;
+}
+
+.hero-title {
+	font-size: calc(3.7rem + (1vw - 3.75px) * 1.6901);
+	font-weight: 800;
+	letter-spacing: -4px;
+}
+
+.hero-blob {
+	width: 100%;
+}
+
+.hero-img {
+	overflow: hidden;
+}
+
+.hero-img svg path {
+	fill: #f8f8f8;
+}
+
+.hero-img img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 130%;
+}
+
+.hero-btns a {
+	text-decoration: none
+}
+
+
+/*-- Brand Logos --*/
+
+.brand-logos-text {
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.brand-logos-img img {
+	max-height: 28px;
+	margin: 20px 20px 0 20px;
+}
+
+
+/*-- Features --*/
+
+.features {
+	margin-top: 180px;
+}
+
+.feature-box {
+	margin: 30px 60px;
+	padding-left: 8px;
+}
+
+.feature-box-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.feature-box-icon {
+	position: absolute;
+	top: 0px;
+	left: -40px;
+	width: 30px;
+}
+
+
+/*-- 3 Content Sections --*/
+
+.content-section {
+	margin-top: 120px;
+}
+
+.content-title {
+	font-size: 2.3rem;
+}
+
+.content-text ul li {
+	background-image: url(../images/check.svg);
+	background-repeat: no-repeat;
+	background-size: 19px;
+	background-position: center left;
+	margin-bottom: 6px;
+	padding-left: 28px;
+}
+
+.content-img img {
+	width: 100%;
+}
+
+.content-cta {
+	text-decoration: none;
+}
+
+
+/*-- USP Cards --*/
+
+.usp {
+	margin-top: 120px;
+}
+
+.usp-main-title {
+	font-size: 2.3rem;
+}
+
+.usp-main:after {
+	content: '';
+	background: url('../images/how-it-works.png');
+	position: absolute;
+	top: 0;
+	bottom: -100px;
+	left: -50px;
+	right: 50px;
+	opacity: .03;
+	z-index: -1
+}
+
+.usp-sub-title {
+	font-size: 1.2rem;
+}
+
+.usp-sub-text {
+	font-size: 1rem;
+	padding-left: 35px;
+}
+
+.usp-sub {
+	box-shadow: 0 25px 45px 0 rgba(0, 0, 0, .05)
+}
+
+.usp-sub-head img {
+	height: 22px;
+	padding-right: 5px;
+}
+
+
+/*-- Testimonials --*/
+
+.testimonials {
+	margin-top: 180px;
+}
+
+.testimonial img {
+	filter: grayscale(1);
+	max-width: 90px;
+}
+
+.testimonial-user {
+	font-size: 1.2rem;
+}
+
+.testimonial-user-role {
+	font-size: 1rem;
+	color: #777
+}
+
+.testimonial-text {
+	font-size: 1rem;
+}
+
+
+/*-- CTA Box --*/
+
+.cta {
+	margin-top: 180px;
+	max-width: 1030px;
+}
+
+.cta-content {
+	background: #fff;
+	box-shadow: 0 24px 44px 0 rgba(0, 0, 0, .05);
+	padding: 50px;
+}
+
+.cta-content:before,
+.cta-content:after {
+	content: '';
+	position: absolute;
+	background: url('../images/mesh.png');
+	width: 200px;
+	height: 200px;
+	z-index: -1;
+}
+
+.cta-content:before {
+	left: -43px;
+	top: -10px;
+}
+
+.cta-content:after {
+	right: -10px;
+	bottom: -80px;
+}
+
+.cta-title {
+	font-size: 3rem
+}
+
+.cta-text {
+	font-weight: 500;
+	max-width: 800px;
+}
+
+.cta-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+/*-- Footer --*/
+
+.footer {
+	background: #161616;
+	margin-top: 180px;
+	padding: 60px 0 0 0;
+}
+
+.footer-logo {
+	max-width: 130px;
+}
+
+.footer p {
+	color: #999;
+}
+
+.footer-title {
+	color: #fff;
+	font-size: 1.2rem
+}
+
+.footer-links a {
+	color: #999;
+}
+
+.footer-links li {
+	margin-bottom: 20px;
+}
+
+.footer-social img {
+	height: 17px;
+	padding-right: 4px;
+}
+
+.footer-credits {
+	border-top: 1px solid rgba(255, 255, 255, .1)
+}
+
+.footer-credits p {
+	color: #999;
+}
+
+.footer-credits a {
+	color: #dcdcdc;
+}
+
+
+/*-- Animations Start --*/
+
+.floating {
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		transform: translate(-50%, calc(-50% - 5px));
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+/*-- Animations End--*/
+
+
+/*-- Min Width Media Queries Start --*/
+
+@media (min-width: 992px) {
+	.primary-menu {
+		height: 65px;
+	}
+	.primary-menu .dropdown:hover .dropdown-menu {
+		display: block;
+		margin-top: 0;
+	}
+	.primary-menu .navbar-nav .nav-link:hover {
+		background: #f1f1f1;
+		border-radius: 5px;
+	}
+	.primary-menu .dropdown-menu {
+		box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+	}
+}
+
+@media (min-width: 1200px) {
+	.short-section {
+		max-width: 1060px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.primary-menu {
+		height: 72px;
+	}
+}
+
+
+/*--Min Width Media Queries End --*/
+
+
+/*--Max Width Media Queries Start --*/
+
+@media (max-width: 1399.98px) {
+	body {
+		font-size: 1rem;
+		line-height: 1.6rem;
+	}
+	.primary-menu .navbar-brand img {
+		max-width: 120px;
+	}
+	.hero-title {
+		font-size: calc(2.5rem + (1vw - 3.75px) * 1.6901);
+		letter-spacing: -3px;
+	}
+	.section-title {
+		font-size: 1.8rem;
+	}
+	.brand-logos-text {
+		font-size: 1.6rem;
+	}
+	.feature-box-title {
+		font-size: 1.3rem;
+	}
+	.feature-box-icon {
+		left: -32px;
+		width: 25px;
+	}
+	.content-title {
+		font-size: 1.8rem;
+	}
+	.usp-main-title {
+		font-size: 1.8rem;
+	}
+	.usp-sub-title {
+		font-size: 1.1rem;
+	}
+	.usp-sub-text {
+		padding-left: 30px;
+	}
+	.usp-sub-head img {
+		height: 19px;
+	}
+	.section-subtitle {
+		font-size: 1rem;
+	}
+	.cta-title {
+		font-size: 2.3rem;
+	}
+	.footer-logo {
+		max-width: 120px;
+	}
+	.footer-title {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.hero {
+		padding: 60px 0;
+	}
+	.hero-content {
+		text-align: center;
+		padding: 40px 0 40px 0;
+	}
+	.hero-title {
+		font-size: calc(2.3rem + (1vw - 3.75px) * 1.6901);
+		letter-spacing: -2px;
+	}
+	.hero-img img {
+		width: 80%;
+	}
+	.brand-logos {
+		margin-top: 50px;
+	}
+	.features {
+		margin-top: 120px;
+	}
+	.content-title {
+		font-size: 2rem;
+	}
+	.testimonials {
+		margin-top: 120px;
+	}
+	.cta {
+		margin-top: 120px;
+	}
+	.cta-title {
+		font-size: 3rem;
+	}
+	.footer {
+		margin-top: 120px;
+		padding: 30px 0 0 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.hero-title {
+		font-size: 2.8rem;
+		letter-spacing: -1px;
+	}
+	.content-section {
+		margin-top: 70px;
+	}
+	.content-text {
+		margin-top: 30px;
+	}
+	.cta-title {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.section-title {
+		font-size: 1.6rem;
+	}
+	.section-subtitle {
+		font-size: 1rem;
+	}
+	.hero-content {
+		padding: 20px 0 0px 0;
+	}
+	.hero-title {
+		font-size: 1.8rem;
+	}
+	.hero-subtitle {
+		font-size: 1.1rem;
+	}
+	.hero-img img {
+		width: 100%;
+	}
+	.brand-logos-text {
+		font-size: 1.2rem;
+	}
+	.brand-logos-img {
+		margin-top: 25px;
+	}
+	.brand-logos-img img {
+		margin: 10px 10px;
+		max-height: 16px;
+	}
+	.features {
+		margin-top: 80px;
+	}
+	.feature-box-title {
+		font-size: 1.23rem;
+	}
+	.feature-box-icon {
+		left: -30px;
+		width: 23px;
+	}
+	.content-section {
+		margin-top: 30px;
+	}
+	.content-title {
+		font-size: 1.6rem;
+	}
+	.content-text {
+		margin-top: 30px
+	}
+	.usp {
+		margin-top: 50px;
+	}
+	.usp-main-title {
+		font-size: 1.6rem;
+	}
+	.testimonials {
+		margin-top: 80px;
+	}
+	.cta {
+		margin-top: 50px;
+	}
+	.cta-content {
+		padding: 30px 20px;
+	}
+	.footer {
+		margin-top: 50px;
+	}
+	.cta-title {
+		font-size: 1.6rem;
+	}
+}
+
+
+/*--Max Width Media Queries End --*/

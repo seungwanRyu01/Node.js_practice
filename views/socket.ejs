@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+        <script>
+            // socket 연결을 시켜주는 명령어. 여기까지 하면 지금부터 이벤트 방식으로 다 만들 것이다.
+            var socket = io.connect();
+            console.log( socket );
+
+            // on : 통신을 받는다. 수신
+            // emit : 통신을 보낸다. 송신
+            // emit과 on을 할 때 이벤트명(플래그)와 함께 송수신
+
+            function go() {
+                socket.emit( "a", document.getElementById('abc').value );
+            }
+
+            // send : 이벤트명
+            socket.on( "send", function( data ) {
+                alert( data );
+            });
+
+            // 이벤트명 : event, 이름 : name
+            // socket.emit( "event", { name : "홍길동" });
+        </script>
+    </head>
+    <body>
+        <h1> Socket View 파일입니다. </h1>
+
+        <input type="text" id="abc">
+        <button type="button" onclick="go();">버튼</button>
+    </body>
+</html>

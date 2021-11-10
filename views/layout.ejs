@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta http-equiv="refresh" content="60">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>DDOAPPA? 알맞는 병원을 찾아줘</title>
+      <meta name="robots" content="noindex,nofollow">
+      <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+      <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="/assets/css/style.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">\
+      <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=oovafiri9x"></script>
+      <script src="https://kit.fontawesome.com/0095e3bbf8.js" crossorigin="anonymous"></script>
+      <style>
+        @font-face {
+            font-family: 'InfinitySans-RegularA1';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{
+            font-family: 'InfinitySans-RegularA1';
+        }
+      </style>
+   </head>
+   <body>
+      <!-- Navigation Start-->
+      <header class="header">
+         <nav id="primary-nav" class="primary-menu navbar navbar-expand-md navbar-light fixed-top">
+               <div class="container">
+                  <a class="navbar-brand" href="./main"><img src="/assets/images/ddoappa_logo.png"></a>
+                  
+                  <div class="collapse navbar-collapse py-lg-4" id="navbarSupportedContent">
+                     <ul class="navbar-nav mx-auto mt-3 mt-md-0 mb-2 mb-lg-0">
+                           <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#scrollspyHeading1">서비스 소개</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#scrollspyHeading2">병명 검색</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#scrollspyHeading3">병원 검색</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#scrollspyHeading4">도움서비스</a>
+                           </li>
+                           <li class="nav-item dropdown d-none" id="myPage">
+                              <a class="nav-link dropdown-toggle" href="{% url 'mypage' %}" id="navbarDropdown" role="button" data-bs-hover="dropdown" aria-expanded="false">
+                                 마이페이지
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                 <li><a class="dropdown-item" href="#">즐겨찾기</a></li>
+                                 <li><a class="dropdown-item" href="#">최근 검색 기록</a></li>
+                                 <li><a class="dropdown-item" href="#">예약 내역</a></li>
+                                 <li><a class="dropdown-item" href="{% url 'updateuserPage' %}">회원정보 수정</a></li>
+                                 <li><a class="dropdown-item" href="{% url 'deleteuserPage' %}">회원 탈퇴</a></li>
+                              </ul>
+                           </li>
+                     </ul>
+                        <span class="header-btns d-inline-block mb-3 mb-lg-0">
+                           <a class="text-dark ms-3 fw-bold ms-lg-4 d-none" id="loginWelcome">{{infoUser.username}}님, 환영합니다 ヽ(✿ﾟ▽ﾟ)ノ</a>
+                           <a href="{% url 'logout' %}" class="text-dark ms-3 fw-bold ms-lg-4 d-none" id="logOut">Logout</a>
+                           <a href="{% url 'login' %}" class="text-dark ms-3 fw-bold ms-lg-4" id="logIn">Login</a>
+                           <a href="{% url 'register' %}" class="btn btn-dark ms-2 fw-bold ms-lg-4" id="signUp">Sign Up</a>
+                        </span>
+                  </div>
+               </div>
+         </nav>
+      </header>
+      {% block content %}
+
+      {% endblock %}
+      <!--Footer Start-->
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="footer-credits text-center py-2 py-lg-4">
+                     <p class="mb-0">Copyright &copy; 2021 <a href="#">DDOAPPA (Developer : Ryu Seung Wan)</a> All Rights Reserved.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--Footer End-->
+      <script src="/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/js/main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      {% if session %}
+        <script>
+            $('#logIn').addClass('d-none');
+            $('#signUp').addClass('d-none');
+            $('#logOut').removeClass('d-none');
+            $('#loginWelcome').removeClass('d-none');
+            $('#myPage').removeClass('d-none');
+        </script>
+      {% endif %}
+   </body>
+</html>
