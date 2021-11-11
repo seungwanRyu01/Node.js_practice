@@ -50,7 +50,7 @@ app.post( '/upload', upload_multer.single( "userfile" ), ( req, res ) => {
     // upload_multer.array : multiple 속성을 적용할 경우, 다중 파일 처리
     // upload_multer.field
     console.log( req.file );
-    res.send("success");
+    res.send("success"); 
 });
 
 
